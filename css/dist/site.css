@@ -1,0 +1,38 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-color:#f7b733;
+}
+header{
+  position: absolute;
+  top:0;
+  left:0;
+  right:0;
+  width:100%;
+  height: 80px;
+  background-color: #4abdac;
+}
+footer{
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  width:100%;
+  height: 80px;
+  background-color: #fc4a1a;
+}
+.container{
+    position: absolute;
+    right:0;
+    left:0;
+    top:80px;
+    bottom:80px;
+    background-color:#dfdce3;
+}
+footer button{
+    background-color: transparent;
+    color: white;
+}
+footer button span{
+    font-size: 40px;  
+}
