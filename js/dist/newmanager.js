@@ -5,9 +5,9 @@ var NewManager = (function(){
             servicesUrl = services;
         },
         InsertPost: function() {
-          debugger;
+          
             let newPost = {
-                Text: $("#blog-text"),
+                Text: $("#blog-text").val(),
                 User: $("#username").val()
             };
 
@@ -15,16 +15,20 @@ var NewManager = (function(){
               return;
             }
 
-            $.post({
-              url: servicesUrl + "insertpost",
-              data: { entry : { Text: newPost.Text, User: newPost.User}},
-              success: function(){
-                debugger;
-              },
-              failure: function(){
-                debugger;
-              }
-
+            $.ajax({
+				method: "POST",
+				traditional: true,
+			  url: servicesUrl + "insertpost",
+			  data: JSON.stringify({ entry : { Text: newPost.Text, User: newPost.User}}),
+			  success: function(){
+				window.location.href = "list.html";
+			  },
+			  error: function(error){
+				alert("É avvenuto un errore durante l'inserimento dell'utente");
+				console.log(error);	
+			  },
+			dataType : "json",
+			contentType: "application/json; charset=utf-8",
             });
         }
   }

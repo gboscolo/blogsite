@@ -27,7 +27,8 @@ footer{
     left:0;
     top:80px;
     bottom:80px;
-    background-color:#dfdce3;
+	background-color: white;
+/*     background-color:#dfdce3; */
 }
 footer button{
     background-color: transparent;
@@ -35,4 +36,21 @@ footer button{
 }
 footer button span{
     font-size: 40px;  
+}
+#posts-table {
+	margin-top: 20px;
+	background-color: white;
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
 }
